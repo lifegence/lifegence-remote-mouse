@@ -12,6 +12,20 @@ Perfect for when your trackpad is broken or for remote presentations.
   <img src="docs/images/icon.png" alt="Remote Mouse Icon" width="200">
 </p>
 
+## Why This App?
+
+Many remote mouse apps run background processes on your PC that persist even after you close the app. This raises serious **security and privacy concerns** - you can't be sure what data these closed-source applications are collecting or transmitting.
+
+**Remote Mouse** is different:
+
+- **100% Open Source**: Every line of code is available for inspection
+- **No Background Processes**: Server stops completely when you close it
+- **No Data Collection**: Zero analytics, telemetry, or tracking
+- **Minimal Permissions**: Only uses what's absolutely necessary
+- **Transparent Communication**: Simple WebSocket protocol you can verify
+
+We believe you should be able to trust the software running on your PC. That's why we made this completely open source.
+
 ## Features
 
 - **Easy Connection**: Instant connection via QR code scan
