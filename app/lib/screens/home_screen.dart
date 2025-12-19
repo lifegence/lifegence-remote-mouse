@@ -90,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Remote Mouse'),
+        title: const Text('Lifegence Remote Mouse'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: Consumer<WebSocketService>(

@@ -15,7 +15,7 @@ class RemoteMouseApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => WebSocketService(),
       child: MaterialApp(
-        title: 'Remote Mouse',
+        title: 'Lifegence Remote Mouse',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
           useMaterial3: true,
