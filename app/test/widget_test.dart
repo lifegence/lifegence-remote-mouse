@@ -1,8 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:provider/provider.dart';
 import 'package:remote_mouse/main.dart';
-import 'package:remote_mouse/services/websocket_service.dart';
 
 void main() {
   testWidgets('App renders home screen', (WidgetTester tester) async {
