@@ -142,7 +142,7 @@ flutter build apk --release
 | Component | Requirements |
 |-----------|-------------|
 | Server | Windows 10/11, Python 3.8+ |
-| App | Android 5.0 (API 21) or higher |
+| App | Android 6.0 (API 23) or higher |
 | Network | Same WiFi network |
 
 ## Troubleshooting
