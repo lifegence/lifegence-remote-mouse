@@ -3,23 +3,23 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
-enum ConnectionState { disconnected, connecting, connected, error }
+enum WsConnectionState { disconnected, connecting, connected, error }
 
 class WebSocketService extends ChangeNotifier {
   WebSocketChannel? _channel;
-  ConnectionState _state = ConnectionState.disconnected;
+  WsConnectionState _state = WsConnectionState.disconnected;
   String? _errorMessage;
   String? _serverUrl;
 
-  ConnectionState get state => _state;
+  WsConnectionState get state => _state;
   String? get errorMessage => _errorMessage;
   String? get serverUrl => _serverUrl;
-  bool get isConnected => _state == ConnectionState.connected;
+  bool get isConnected => _state == WsConnectionState.connected;
 
   Future<void> connect(String url) async {
-    if (_state == ConnectionState.connecting) return;
+    if (_state == WsConnectionState.connecting) return;
 
-    _state = ConnectionState.connecting;
+    _state = WsConnectionState.connecting;
     _errorMessage = null;
     _serverUrl = url;
     notifyListeners();
@@ -30,7 +30,7 @@ class WebSocketService extends ChangeNotifier {
 
       await _channel!.ready;
 
-      _state = ConnectionState.connected;
+      _state = WsConnectionState.connected;
       notifyListeners();
 
       _channel!.stream.listen(
@@ -38,17 +38,17 @@ class WebSocketService extends ChangeNotifier {
           // Handle server messages if needed
         },
         onError: (error) {
-          _state = ConnectionState.error;
+          _state = WsConnectionState.error;
           _errorMessage = error.toString();
           notifyListeners();
         },
         onDone: () {
-          _state = ConnectionState.disconnected;
+          _state = WsConnectionState.disconnected;
           notifyListeners();
         },
       );
     } catch (e) {
-      _state = ConnectionState.error;
+      _state = WsConnectionState.error;
       _errorMessage = e.toString();
       notifyListeners();
     }
@@ -57,7 +57,7 @@ class WebSocketService extends ChangeNotifier {
   void disconnect() {
     _channel?.sink.close();
     _channel = null;
-    _state = ConnectionState.disconnected;
+    _state = WsConnectionState.disconnected;
     notifyListeners();
   }
 
@@ -74,7 +74,7 @@ class WebSocketService extends ChangeNotifier {
   }
 
   void _send(Map<String, dynamic> data) {
-    if (_state == ConnectionState.connected && _channel != null) {
+    if (_state == WsConnectionState.connected && _channel != null) {
       _channel!.sink.add(jsonEncode(data));
     }
   }

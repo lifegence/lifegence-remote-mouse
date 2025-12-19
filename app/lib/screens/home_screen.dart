@@ -151,11 +151,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     Expanded(
                       child: ElevatedButton.icon(
                         onPressed:
-                            service.state == ConnectionState.connecting
+                            service.state == WsConnectionState.connecting
                                 ? null
                                 : _connect,
                         icon:
-                            service.state == ConnectionState.connecting
+                            service.state == WsConnectionState.connecting
                                 ? const SizedBox(
                                   width: 20,
                                   height: 20,
@@ -165,7 +165,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 )
                                 : const Icon(Icons.link),
                         label: Text(
-                          service.state == ConnectionState.connecting
+                          service.state == WsConnectionState.connecting
                               ? 'Connecting...'
                               : 'Connect',
                         ),
@@ -188,7 +188,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ],
                 ),
-                if (service.state == ConnectionState.error) ...[
+                if (service.state == WsConnectionState.error) ...[
                   const SizedBox(height: 16),
                   Text(
                     'Error: ${service.errorMessage}',
