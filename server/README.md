@@ -1,43 +1,44 @@
 # Remote Mouse Server
 
-Windows用のリモートマウスサーバー。
+Remote mouse server for Windows.
 
-## 必要環境
+## Requirements
 
 - Windows 10/11
-- Python 3.8以上
+- Python 3.8 or higher
 
-## インストール
+## Installation
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 実行
+## Run
 
 ```bash
 python main.py
 ```
 
-## ビルド
+## Build
 
-### EXEのみ
+### EXE Only
 
 ```bash
-pyinstaller --onefile --noconsole --name RemoteMouseServer main.py
+pyinstaller --onefile --noconsole --icon=icon.ico --name RemoteMouseServer main.py
 ```
 
-### インストーラー付き
+### With Installer
 
-1. [Inno Setup](https://jrsoftware.org/isdl.php) をインストール
-2. `build.bat` を実行
+1. Install [Inno Setup](https://jrsoftware.org/isdl.php)
+2. Run `build.bat`
 
-## ファイル構成
+## File Structure
 
-| ファイル | 説明 |
-|----------|------|
-| main.py | GUIアプリケーション |
-| websocket_server.py | WebSocket通信 |
-| mouse_controller.py | マウス操作（pyautogui） |
-| installer.iss | Inno Setupスクリプト |
-| build.bat | ビルドスクリプト |
+| File | Description |
+|------|-------------|
+| main.py | GUI application |
+| websocket_server.py | WebSocket communication |
+| mouse_controller.py | Mouse control (pyautogui) |
+| installer.iss | Inno Setup script |
+| build.bat | Build script |
+| icon.ico | Application icon |

@@ -1,58 +1,58 @@
 # Remote Mouse App
 
-Android用のリモートマウスアプリ（Flutter）。
+Remote mouse app for Android (Flutter).
 
-## 必要環境
+## Requirements
 
-- Flutter SDK 3.10以上
+- Flutter SDK 3.10 or higher
 - Android SDK
 
-## セットアップ
+## Setup
 
 ```bash
 flutter pub get
 ```
 
-## 実行
+## Run
 
 ```bash
 flutter run
 ```
 
-## ビルド
+## Build
 
-### デバッグビルド
+### Debug Build
 
 ```bash
 flutter build apk --debug
 ```
 
-### リリースビルド
+### Release Build
 
 ```bash
 flutter build apk --release
 ```
 
-生成されるAPK: `build/app/outputs/flutter-apk/app-release.apk`
+Generated APK: `build/app/outputs/flutter-apk/app-release.apk`
 
-## ファイル構成
+## File Structure
 
 ```
 lib/
-├── main.dart              # エントリーポイント
+├── main.dart              # Entry point
 ├── screens/
-│   ├── home_screen.dart   # 接続画面（IP入力・QRスキャン）
-│   └── touchpad_screen.dart # タッチパッド画面
+│   ├── home_screen.dart   # Connection screen (IP input / QR scan)
+│   └── touchpad_screen.dart # Touchpad screen
 ├── services/
-│   └── websocket_service.dart # WebSocket通信
+│   └── websocket_service.dart # WebSocket communication
 └── widgets/
-    └── touchpad_widget.dart   # タッチパッドUI
+    └── touchpad_widget.dart   # Touchpad UI
 ```
 
-## 機能
+## Features
 
-- IP入力またはQRコードスキャンで接続
-- タッチパッドでマウス操作
-- タップで左クリック
-- 長押しで右クリック
-- 2本指スワイプでスクロール
+- Connect via IP input or QR code scan
+- Mouse control with touchpad
+- Tap for left click
+- Long press for right click
+- Two-finger swipe for scrolling

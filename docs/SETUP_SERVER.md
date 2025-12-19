@@ -1,21 +1,21 @@
 # Server Setup Guide
 
-PCサーバーのセットアップガイド
+Setup guide for the PC server.
 
-## 必要環境
+## Requirements
 
 - Windows 10/11
-- Python 3.8以上
+- Python 3.8 or higher
 
-## インストール方法
+## Installation
 
-### 方法1: インストーラーを使用（推奨）
+### Option 1: Use Installer (Recommended)
 
-1. [Releases](https://github.com/lifegence/lifegence-remote-mouse/releases) から最新の `RemoteMouseServer_Setup.exe` をダウンロード
-2. インストーラーを実行
-3. デスクトップのショートカットから起動
+1. Download the latest `RemoteMouseServer_Setup.exe` from [Releases](https://github.com/lifegence/lifegence-remote-mouse/releases)
+2. Run the installer
+3. Launch from the desktop shortcut
 
-### 方法2: ソースから実行
+### Option 2: Run from Source
 
 ```bash
 cd server
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-### 方法3: 自分でビルド
+### Option 3: Build Yourself
 
 ```bash
 cd server
@@ -31,25 +31,25 @@ pip install -r requirements.txt
 build.bat
 ```
 
-## ファイアウォール設定
+## Firewall Configuration
 
-初回起動時にWindowsファイアウォールの許可を求められます。
-「プライベートネットワーク」を許可してください。
+On first launch, Windows Firewall will ask for permission.
+Allow access for "Private networks".
 
-手動で設定する場合:
-1. Windows設定 → Windows セキュリティ → ファイアウォールとネットワーク保護
-2. 「ファイアウォールによるアプリケーションの許可」
-3. 「設定の変更」→「別のアプリの許可」
-4. RemoteMouseServer.exe を追加
+Manual configuration:
+1. Windows Settings → Windows Security → Firewall & network protection
+2. "Allow an app through firewall"
+3. "Change settings" → "Allow another app"
+4. Add RemoteMouseServer.exe
 
-## トラブルシューティング
+## Troubleshooting
 
-### QRコードが表示されない
+### QR Code Not Displayed
 
-- Python と Pillow が正しくインストールされているか確認
-- `pip install pillow qrcode` を実行
+- Verify Python and Pillow are installed correctly
+- Run `pip install pillow qrcode`
 
-### IPアドレスが取得できない
+### Cannot Get IP Address
 
-- WiFiに接続されているか確認
-- VPNを使用している場合は一時的に無効化
+- Check WiFi connection
+- Temporarily disable VPN if using one

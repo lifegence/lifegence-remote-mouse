@@ -1,22 +1,22 @@
 # Android App Setup Guide
 
-Androidアプリのセットアップガイド
+Setup guide for the Android app.
 
-## インストール方法
+## Installation
 
-### 方法1: APKをダウンロード（推奨）
+### Option 1: Download APK (Recommended)
 
-1. [Releases](https://github.com/lifegence/lifegence-remote-mouse/releases) から最新の `remote-mouse.apk` をダウンロード
-2. スマホで「提供元不明のアプリ」を許可
-3. APKをインストール
+1. Download the latest `remote-mouse.apk` from [Releases](https://github.com/lifegence/lifegence-remote-mouse/releases)
+2. Enable "Install from unknown sources" on your phone
+3. Install the APK
 
-### 方法2: ソースからビルド
+### Option 2: Build from Source
 
-#### 必要環境
-- Flutter SDK 3.10以上
+#### Requirements
+- Flutter SDK 3.10 or higher
 - Android SDK
 
-#### ビルド手順
+#### Build Steps
 
 ```bash
 cd app
@@ -24,44 +24,44 @@ flutter pub get
 flutter build apk --release
 ```
 
-生成されるAPK: `app/build/app/outputs/flutter-apk/app-release.apk`
+Generated APK: `app/build/app/outputs/flutter-apk/app-release.apk`
 
-## 権限
+## Permissions
 
-アプリは以下の権限を使用します:
+The app uses the following permissions:
 
-| 権限 | 用途 |
-|------|------|
-| インターネット | PCサーバーとの通信 |
-| カメラ | QRコードスキャン |
+| Permission | Purpose |
+|------------|---------|
+| Internet | Communication with PC server |
+| Camera | QR code scanning |
 
-## 使い方
+## Usage
 
-1. PCでサーバーを起動
-2. アプリを開く
-3. QRコードをスキャン、またはIPアドレスを入力
-4. 「Connect」をタップ
-5. タッチパッド画面でマウス操作
+1. Start the server on PC
+2. Open the app
+3. Scan QR code or enter IP address
+4. Tap "Connect"
+5. Use the touchpad screen to control the mouse
 
-## 操作方法
+## Controls
 
-| 操作 | 機能 |
-|------|------|
-| ドラッグ | マウス移動 |
-| タップ | 左クリック |
-| 長押し（0.5秒） | 右クリック |
-| 2本指スワイプ | スクロール |
-| 下部ボタン | 左/右クリック |
+| Action | Function |
+|--------|----------|
+| Drag | Mouse movement |
+| Tap | Left click |
+| Long press (0.5s) | Right click |
+| Two-finger swipe | Scroll |
+| Bottom buttons | Left/Right click |
 
-## トラブルシューティング
+## Troubleshooting
 
-### 接続できない
+### Cannot Connect
 
-1. PCとスマホが同じWiFiに接続されているか確認
-2. PCのファイアウォールでポート8765が許可されているか確認
-3. IPアドレスが正しいか確認
+1. Ensure PC and phone are on the same WiFi network
+2. Verify port 8765 is allowed in PC firewall
+3. Check the IP address is correct
 
-### 反応が遅い
+### Slow Response
 
-- WiFiの電波強度を確認
-- 5GHz帯のWiFiを使用（2.4GHzより高速）
+- Check WiFi signal strength
+- Use 5GHz WiFi (faster than 2.4GHz)

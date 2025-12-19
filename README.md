@@ -4,80 +4,79 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Android-blue.svg)]()
 
-スマートフォンをPCのマウス・タッチパッドとして使用するアプリケーション。
+Use your smartphone as a PC mouse/touchpad.
 
-トラックパッドが壊れた時や、プレゼン時のリモートマウスとして活用できます。
+Perfect for when your trackpad is broken or for remote presentations.
 
 <p align="center">
-  <img src="docs/images/screenshot_server.png" alt="Server" width="300">
-  <img src="docs/images/screenshot_app.png" alt="App" width="200">
+  <img src="docs/images/icon.png" alt="Remote Mouse Icon" width="200">
 </p>
 
-## 特徴
+## Features
 
-- **簡単接続**: QRコードスキャンで即座に接続
-- **低遅延**: WiFi経由のWebSocket通信で快適な操作感
-- **多機能**: マウス移動、クリック、スクロールに対応
-- **キーボード不要**: PC側はEnterキー一発で起動
+- **Easy Connection**: Instant connection via QR code scan
+- **Low Latency**: Smooth operation with WebSocket over WiFi
+- **Full Functionality**: Mouse movement, clicks, and scrolling
+- **Keyboard-Free Setup**: Launch PC server with just Enter key
 
-## 機能
+## Controls
 
-| 操作 | 機能 |
-|------|------|
-| ドラッグ | マウス移動 |
-| タップ | 左クリック |
-| 長押し（0.5秒） | 右クリック |
-| 2本指スワイプ | スクロール |
+| Action | Function |
+|--------|----------|
+| Drag | Mouse movement |
+| Tap | Left click |
+| Long press (0.5s) | Right click |
+| Two-finger swipe | Scroll |
 
-## クイックスタート
+## Quick Start
 
-### 1. ダウンロード
+### 1. Download
 
-[Releases](https://github.com/lifegence/lifegence-remote-mouse/releases) から最新版をダウンロード:
+Download the latest version from [Releases](https://github.com/lifegence/lifegence-remote-mouse/releases):
 
-- **Windows**: `RemoteMouseServer_Setup.exe` または `RemoteMouseServer.exe`
+- **Windows**: `RemoteMouseServer_Setup.exe` or `RemoteMouseServer.exe`
 - **Android**: `remote-mouse.apk`
 
-### 2. PCでサーバーを起動
+### 2. Start Server on PC
 
 ```
-RemoteMouseServer.exe を実行
-→ QRコードとIPアドレスが表示される
+Run RemoteMouseServer.exe
+→ QR code and IP address will be displayed
 ```
 
-### 3. スマホで接続
+### 3. Connect from Phone
 
 ```
-アプリを起動
-→ QRコードをスキャン or IPアドレスを入力
-→ Connect をタップ
+Open the app
+→ Scan QR code or enter IP address
+→ Tap Connect
 ```
 
-### 4. 使う
+### 4. Use It
 
-タッチパッド画面でスマホをマウスとして使用！
+Use your phone as a touchpad!
 
-## プロジェクト構成
+## Project Structure
 
 ```
 lifegence-remote-mouse/
-├── server/                 # PCサーバー（Python/Windows）
-│   ├── main.py            # メインアプリ（GUI）
-│   ├── websocket_server.py # WebSocket通信
-│   ├── mouse_controller.py # マウス操作
+├── server/                 # PC Server (Python/Windows)
+│   ├── main.py            # Main app (GUI)
+│   ├── websocket_server.py # WebSocket communication
+│   ├── mouse_controller.py # Mouse control
 │   ├── requirements.txt
-│   ├── build.bat          # ビルドスクリプト
-│   └── installer.iss      # インストーラー設定
+│   ├── build.bat          # Build script
+│   └── installer.iss      # Installer config
 │
-├── app/                    # Androidアプリ（Flutter）
+├── app/                    # Android App (Flutter)
 │   ├── lib/
 │   │   ├── main.dart
-│   │   ├── screens/       # 画面
-│   │   ├── services/      # WebSocket通信
-│   │   └── widgets/       # タッチパッド
+│   │   ├── screens/       # Screens
+│   │   ├── services/      # WebSocket communication
+│   │   └── widgets/       # Touchpad
 │   └── pubspec.yaml
 │
-├── docs/                   # ドキュメント
+├── docs/                   # Documentation
 │   ├── SETUP_SERVER.md
 │   ├── SETUP_APP.md
 │   └── CONTRIBUTING.md
@@ -86,9 +85,9 @@ lifegence-remote-mouse/
     └── build.yml
 ```
 
-## 開発
+## Development
 
-### サーバー（Python）
+### Server (Python)
 
 ```bash
 cd server
@@ -96,7 +95,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-### アプリ（Flutter）
+### App (Flutter)
 
 ```bash
 cd app
@@ -104,18 +103,18 @@ flutter pub get
 flutter run
 ```
 
-詳細は [CONTRIBUTING.md](docs/CONTRIBUTING.md) を参照。
+See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details.
 
-## ビルド
+## Build
 
-### Windows インストーラー
+### Windows Installer
 
 ```bash
 cd server
 build.bat
 ```
 
-[Inno Setup](https://jrsoftware.org/isdl.php) がインストールされていれば、インストーラーも自動生成されます。
+If [Inno Setup](https://jrsoftware.org/isdl.php) is installed, the installer will be generated automatically.
 
 ### Android APK
 
@@ -124,32 +123,32 @@ cd app
 flutter build apk --release
 ```
 
-## 動作環境
+## System Requirements
 
-| コンポーネント | 要件 |
-|--------------|------|
-| サーバー | Windows 10/11, Python 3.8+ |
-| アプリ | Android 5.0 (API 21) 以上 |
-| ネットワーク | 同一WiFiネットワーク |
+| Component | Requirements |
+|-----------|-------------|
+| Server | Windows 10/11, Python 3.8+ |
+| App | Android 5.0 (API 21) or higher |
+| Network | Same WiFi network |
 
-## トラブルシューティング
+## Troubleshooting
 
-### 接続できない
+### Cannot Connect
 
-1. PCとスマホが**同じWiFi**に接続されているか確認
-2. Windowsファイアウォールでポート**8765**を許可
-3. VPNを使用している場合は一時的に無効化
+1. Ensure PC and phone are on the **same WiFi** network
+2. Allow port **8765** in Windows Firewall
+3. Disable VPN temporarily if using one
 
-### 反応が遅い
+### Slow Response
 
-- 5GHz帯のWiFiを使用（2.4GHzより高速）
-- ルーターに近い場所で使用
+- Use 5GHz WiFi (faster than 2.4GHz)
+- Stay close to the router
 
-## ライセンス
+## License
 
 [MIT License](LICENSE)
 
-## 貢献
+## Contributing
 
-Issue や Pull Request を歓迎します。
-詳細は [CONTRIBUTING.md](docs/CONTRIBUTING.md) を参照してください。
+Issues and Pull Requests are welcome.
+See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details.

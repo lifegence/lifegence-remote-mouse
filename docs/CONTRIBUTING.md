@@ -1,10 +1,10 @@
 # Contributing Guide
 
-Remote Mouse への貢献ありがとうございます！
+Thank you for contributing to Remote Mouse!
 
-## 開発環境のセットアップ
+## Development Environment Setup
 
-### サーバー（Python）
+### Server (Python)
 
 ```bash
 cd server
@@ -13,7 +13,7 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### アプリ（Flutter）
+### App (Flutter)
 
 ```bash
 cd app
@@ -21,35 +21,35 @@ flutter pub get
 flutter run
 ```
 
-## プルリクエスト
+## Pull Requests
 
-1. このリポジトリをフォーク
-2. 機能ブランチを作成 (`git checkout -b feature/amazing-feature`)
-3. 変更をコミット (`git commit -m 'Add amazing feature'`)
-4. ブランチをプッシュ (`git push origin feature/amazing-feature`)
-5. プルリクエストを作成
+1. Fork this repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push the branch (`git push origin feature/amazing-feature`)
+5. Create a Pull Request
 
-## コーディング規約
+## Coding Standards
 
 ### Python
-- PEP 8 に従う
-- 型ヒントを使用
-- docstring を記述
+- Follow PEP 8
+- Use type hints
+- Write docstrings
 
 ### Dart/Flutter
-- `flutter analyze` でエラーがないこと
-- Effective Dart に従う
+- No errors from `flutter analyze`
+- Follow Effective Dart guidelines
 
-## Issue の報告
+## Reporting Issues
 
-バグを報告する際は以下を含めてください:
+When reporting bugs, please include:
 
-- OS / Androidバージョン
-- 再現手順
-- 期待される動作
-- 実際の動作
-- エラーメッセージ（あれば）
+- OS / Android version
+- Steps to reproduce
+- Expected behavior
+- Actual behavior
+- Error messages (if any)
 
-## 機能リクエスト
+## Feature Requests
 
-新機能のアイデアがあれば、Issue で提案してください。
+If you have ideas for new features, please propose them via Issues.
