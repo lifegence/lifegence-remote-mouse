@@ -1,6 +1,6 @@
 # Remote Mouse
 
-[![Build](https://github.com/user/lifegence-remote-mouse/actions/workflows/build.yml/badge.svg)](https://github.com/user/lifegence-remote-mouse/actions/workflows/build.yml)
+[![Build](https://github.com/lifegence/lifegence-remote-mouse/actions/workflows/build.yml/badge.svg)](https://github.com/lifegence/lifegence-remote-mouse/actions/workflows/build.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Android-blue.svg)]()
 
@@ -33,7 +33,7 @@
 
 ### 1. ダウンロード
 
-[Releases](https://github.com/user/lifegence-remote-mouse/releases) から最新版をダウンロード:
+[Releases](https://github.com/lifegence/lifegence-remote-mouse/releases) から最新版をダウンロード:
 
 - **Windows**: `RemoteMouseServer_Setup.exe` または `RemoteMouseServer.exe`
 - **Android**: `remote-mouse.apk`

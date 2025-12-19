@@ -6,7 +6,7 @@ Androidアプリのセットアップガイド
 
 ### 方法1: APKをダウンロード（推奨）
 
-1. [Releases](https://github.com/user/lifegence-remote-mouse/releases) から最新の `remote-mouse.apk` をダウンロード
+1. [Releases](https://github.com/lifegence/lifegence-remote-mouse/releases) から最新の `remote-mouse.apk` をダウンロード
 2. スマホで「提供元不明のアプリ」を許可
 3. APKをインストール
 

@@ -11,7 +11,7 @@ PCサーバーのセットアップガイド
 
 ### 方法1: インストーラーを使用（推奨）
 
-1. [Releases](https://github.com/user/lifegence-remote-mouse/releases) から最新の `RemoteMouseServer_Setup.exe` をダウンロード
+1. [Releases](https://github.com/lifegence/lifegence-remote-mouse/releases) から最新の `RemoteMouseServer_Setup.exe` をダウンロード
 2. インストーラーを実行
 3. デスクトップのショートカットから起動
 
