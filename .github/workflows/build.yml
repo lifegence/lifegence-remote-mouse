@@ -59,7 +59,7 @@ jobs:
 
       - name: Build EXE
         working-directory: server
-        run: pyinstaller --onefile --noconsole --name RemoteMouseServer main.py
+        run: pyinstaller --onefile --noconsole --icon=icon.ico --name RemoteMouseServer main.py
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
