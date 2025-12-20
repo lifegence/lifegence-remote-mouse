@@ -48,13 +48,19 @@ We believe you should be able to trust the software running on your PC. That's w
 
 Download the latest version from [Releases](https://github.com/lifegence/lifegence-remote-mouse/releases):
 
-- **Windows**: `RemoteMouseServer.exe`
+- **Windows (Installer)**: `RemoteMouseServer_Setup.exe` - Recommended, includes install/uninstall
+- **Windows (Portable)**: `RemoteMouseServer.exe` - Standalone executable, no installation needed
 - **Android**: `app-release.apk`
 
 ### 2. Start Server on PC
 
 ```
-Run RemoteMouseServer.exe
+If you used the installer:
+  → Launch from Start Menu or Desktop shortcut
+
+If you downloaded the portable EXE:
+  → Run RemoteMouseServer.exe directly
+
 → QR code and IP address will be displayed
 ```
 
@@ -121,14 +127,22 @@ See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details.
 
 ## Build
 
-### Windows Installer
+### Windows Server
 
 ```bash
 cd server
 build.bat
 ```
 
-If [Inno Setup](https://jrsoftware.org/isdl.php) is installed, the installer will be generated automatically.
+**Output:**
+- Standalone EXE: `dist/RemoteMouseServer.exe`
+- Installer (if [Inno Setup](https://jrsoftware.org/isdl.php) is installed): `installer_output/RemoteMouseServer_Setup.exe`
+
+The installer provides:
+- Start Menu shortcuts
+- Desktop shortcut (optional)
+- Windows startup option (optional)
+- Proper uninstall via Control Panel
 
 ### Android APK
 

@@ -61,11 +61,24 @@ jobs:
         working-directory: server
         run: pyinstaller --onefile --noconsole --icon=icon.ico --add-data "icon.ico;." --name RemoteMouseServer main.py
 
+      - name: Install Inno Setup
+        run: choco install innosetup -y
+
+      - name: Build Installer
+        working-directory: server
+        run: iscc installer.iss
+
       - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
           name: windows-exe
           path: server/dist/RemoteMouseServer.exe
+
+      - name: Upload Installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-installer
+          path: server/installer_output/RemoteMouseServer_Setup.exe
 
   release:
     needs: [build-android, build-windows]
@@ -83,4 +96,5 @@ jobs:
           files: |
             android-apk/app-release.apk
             windows-exe/RemoteMouseServer.exe
+            windows-installer/RemoteMouseServer_Setup.exe
           generate_release_notes: true

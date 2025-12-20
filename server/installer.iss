@@ -1,7 +1,7 @@
 ; Remote Mouse Server - Inno Setup Script
 ; Download Inno Setup from: https://jrsoftware.org/isdl.php
 
-#define MyAppName "Remote Mouse Server"
+#define MyAppName "Lifegence Remote Mouse Server"
 #define MyAppVersion "1.0.0"
 #define MyAppPublisher "Lifegence"
 #define MyAppExeName "RemoteMouseServer.exe"
@@ -11,11 +11,15 @@ AppId={{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 AppPublisher={#MyAppPublisher}
+AppPublisherURL=https://github.com/lifegence/lifegence-remote-mouse
+AppSupportURL=https://github.com/lifegence/lifegence-remote-mouse/issues
 DefaultDirName={autopf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
 OutputDir=installer_output
 OutputBaseFilename=RemoteMouseServer_Setup
+SetupIconFile=icon.ico
+UninstallDisplayIcon={app}\{#MyAppExeName}
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
