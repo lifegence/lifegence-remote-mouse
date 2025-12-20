@@ -7,6 +7,15 @@ import io
 import qrcode
 from PIL import Image, ImageTk
 
+
+def get_resource_path(filename: str) -> str:
+    """Get the path to a resource file (works with PyInstaller)."""
+    if hasattr(sys, '_MEIPASS'):
+        # Running as PyInstaller bundle
+        return os.path.join(sys._MEIPASS, filename)
+    # Running as script
+    return os.path.join(os.path.dirname(__file__), filename)
+
 try:
     import tkinter as tk
     from tkinter import ttk
@@ -66,7 +75,7 @@ class ServerGUI:
         self.root.attributes('-topmost', True)
 
         # Set window icon
-        icon_path = os.path.join(os.path.dirname(__file__), "icon.ico")
+        icon_path = get_resource_path("icon.ico")
         if os.path.exists(icon_path):
             self.root.iconbitmap(icon_path)
 

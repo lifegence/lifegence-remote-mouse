@@ -14,7 +14,7 @@ echo.
 
 REM Build EXE with PyInstaller
 echo [2/3] Building EXE with PyInstaller...
-pyinstaller --onefile --noconsole --icon=icon.ico --name RemoteMouseServer main.py
+pyinstaller --onefile --noconsole --icon=icon.ico --add-data "icon.ico;." --name RemoteMouseServer main.py
 if errorlevel 1 (
     echo ERROR: PyInstaller build failed!
     pause
