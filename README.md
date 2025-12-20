@@ -48,8 +48,8 @@ We believe you should be able to trust the software running on your PC. That's w
 
 Download the latest version from [Releases](https://github.com/lifegence/lifegence-remote-mouse/releases):
 
-- **Windows**: `RemoteMouseServer_Setup.exe` or `RemoteMouseServer.exe`
-- **Android**: `remote-mouse.apk`
+- **Windows**: `RemoteMouseServer.exe`
+- **Android**: `app-release.apk`
 
 ### 2. Start Server on PC
 
@@ -146,6 +146,16 @@ flutter build apk --release
 | Network | Same WiFi network |
 
 ## Troubleshooting
+
+### Windows "Unknown Publisher" Warning
+
+When running `RemoteMouseServer.exe`, Windows may show a warning that the publisher is unknown. This is normal for open source software without a code signing certificate.
+
+**To run the app:**
+1. Click "More info"
+2. Click "Run anyway"
+
+This warning appears because code signing certificates cost $200-500/year. The app is completely safe - you can verify by reviewing the [source code](https://github.com/lifegence/lifegence-remote-mouse).
 
 ### Cannot Connect
 
