@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Remote Mouse Server - Main entry point with GUI."""
 import sys
+import os
 import threading
 import io
 import qrcode
@@ -60,9 +61,14 @@ class ServerGUI:
     def run(self) -> None:
         """Run the GUI."""
         self.root = tk.Tk()
-        self.root.title("Remote Mouse Server")
+        self.root.title("Lifegence Remote Mouse Server")
         self.root.resizable(False, False)
         self.root.attributes('-topmost', True)
+
+        # Set window icon
+        icon_path = os.path.join(os.path.dirname(__file__), "icon.ico")
+        if os.path.exists(icon_path):
+            self.root.iconbitmap(icon_path)
 
         # Main frame
         main_frame = ttk.Frame(self.root, padding=20)
@@ -71,7 +77,7 @@ class ServerGUI:
         # Title
         title = ttk.Label(
             main_frame,
-            text="Remote Mouse Server",
+            text="Lifegence Remote Mouse",
             font=("Segoe UI", 16, "bold")
         )
         title.pack(pady=(0, 15))
